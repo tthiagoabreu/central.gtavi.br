@@ -32,12 +32,15 @@
     <div class="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-2 px-4 py-3">
       <div class="flex items-center gap-2.5">
         <span class="inline-flex h-3 w-3 rounded-full bg-pink-500 ring-4 ring-pink-500/20"></span>
-        <span class="text-sm font-extrabold tracking-wider text-white">@CENTRAL.GTAVI.BR</span>
-        <span class="hidden rounded-full border border-cyan-400/40 bg-cyan-400/10 px-2.5 py-0.5 text-xs font-semibold text-cyan-300 sm:inline-block">
+        <span id="brandLogoSecret" class="cursor-pointer select-none text-sm font-extrabold tracking-wider text-white" title="Central GTA VI Brasil">@CENTRAL.GTAVI.BR</span>
+        <span id="publicVerifiedBadge" class="rounded-full border border-pink-500/30 bg-pink-500/10 px-2.5 py-0.5 text-[11px] font-semibold text-pink-300">
+          🔒 Links Oficiais Verificados
+        </span>
+        <span id="adminTagBadge" class="hidden rounded-full border border-cyan-400/40 bg-cyan-400/10 px-2.5 py-0.5 text-xs font-semibold text-cyan-300">
           Tag Amazon Ativa: txgames-20
         </span>
       </div>
-      <nav class="flex items-center gap-1.5 rounded-xl bg-slate-900/90 p-1 border border-slate-800" aria-label="Navegação Principal">
+      <nav id="adminNav" class="hidden items-center gap-1.5 rounded-xl bg-slate-900/90 p-1 border border-slate-800" aria-label="Navegação Principal">
         <button id="tabBtnStore" type="button" class="rounded-lg px-3 py-1.5 text-xs font-bold transition bg-pink-600 text-white shadow">
           🌴 Vitrine da Bio (Seguidor)
         </button>
@@ -115,13 +118,13 @@
               Todos (8)
             </button>
             <button type="button" data-cat="GTA6" class="cat-btn rounded-xl px-3 py-1.5 text-xs font-bold transition bg-slate-800/80 text-slate-300 hover:text-white">
-              🔥 Jogo & Gift Cards (Gatilho: GTA6)
+              🔥 Jogo & Gift Cards
             </button>
             <button type="button" data-cat="CONSOLE" class="cat-btn rounded-xl px-3 py-1.5 text-xs font-bold transition bg-slate-800/80 text-slate-300 hover:text-white">
-              🎮 Consoles PS5/Xbox (Gatilho: CONSOLE)
+              🎮 Consoles PS5 & Xbox
             </button>
             <button type="button" data-cat="SETUP" class="cat-btn rounded-xl px-3 py-1.5 text-xs font-bold transition bg-slate-800/80 text-slate-300 hover:text-white">
-              ⚡ SSDs, Controles & Áudio (Gatilho: SETUP)
+              ⚡ SSDs, Controles & Áudio
             </button>
           </div>
 
@@ -177,13 +180,22 @@
               Gerenciador Central de Links Afiliados (Amazon, Mercado Livre e Shopee)
             </h2>
           </div>
-          <button
-            id="btnCopyPythonDict"
-            type="button"
-            class="rounded-xl bg-pink-600 px-4 py-2 text-xs font-extrabold text-white shadow hover:bg-pink-500 transition"
-          >
-            📋 Copiar Catálogo para o Script Python
-          </button>
+          <div class="flex flex-wrap gap-2">
+            <button
+              id="btnDownloadUpdatedHtml"
+              type="button"
+              class="rounded-xl bg-cyan-500 px-4 py-2 text-xs font-extrabold text-slate-950 shadow hover:bg-cyan-400 transition"
+            >
+              💾 Baixar index.html Atualizado (Para GitHub)
+            </button>
+            <button
+              id="btnCopyPythonDict"
+              type="button"
+              class="rounded-xl bg-pink-600 px-4 py-2 text-xs font-extrabold text-white shadow hover:bg-pink-500 transition"
+            >
+              📋 Copiar Catálogo pro Python
+            </button>
+          </div>
         </div>
 
         <p class="text-xs text-slate-300 leading-relaxed">
@@ -286,9 +298,20 @@
         title: "Gift Cards Oficiais PlayStation Store & Xbox (Pré-Venda GTA VI)",
         desc: "Garanta saldo parcelado e com cashback para reservar GTA VI (Standard ou Ultimate Edition) na PSN ou Xbox.",
         priceHint: "A partir de R$ 60 a R$ 530",
-        amazonUrl: "https://www.amazon.com.br/s?k=Cartao+Presente+PlayStation+Store+Xbox&tag=txgames-20",
-        meliUrl: "https://meli.la/2JNu7aK",
-        shopeeUrl: "https://s.shopee.com.br/AAI5NTPVEk"
+        amazonUrl: "https://www.amazon.com.br/s?k=Cartao+Presente+PlayStation+Store+Xbox&tag=txgames-20&linkCode=ll2",
+        meliUrl: "https://www.mercadolivre.com.br/sony-playstation-store-gift-card-r-100-digital/p/MLB50200776?matt_tool=65544&matt_word=central_gtavi_br_127800315_giftcard_psn",
+        shopeeUrl: "https://shopee.com.br/Gift-Card-PlayStation-Store-R-530-Cart%C3%A3o-Presente-Digital-i.1319917942.22998362281?utm_source=an_18144380000&utm_medium=affiliates&utm_campaign=central_gtavi_br&utm_content=giftcard_gta6&utm_term=cctaa1899mkb"
+      },
+      {
+        id: "gta_v_ps5_midia_fisica",
+        category: "GTA6",
+        badge: "🌴 ESQUENTA PARA LEONIDA",
+        title: "Jogo Grand Theft Auto V (GTA 5 Edição Nova Geração PS5 & Xbox Series X)",
+        desc: "Versão remasterizada em 4K 60fps com Ray Tracing e GTA Online incluso para aquecer até 19 de novembro.",
+        priceHint: "Mídia física lacrada com desconto",
+        amazonUrl: "https://www.amazon.com.br/s?k=Grand+Theft+Auto+V+PlayStation+5+Midia+Fisica&tag=txgames-20&linkCode=ll2",
+        meliUrl: "https://www.mercadolivre.com.br/jogo-gta-5-ps5-grand-theft-auto-v-ps5-midia-fisica/p/MLB22379833?matt_tool=65544&matt_word=central_gtavi_br_127800315_gtav_ps5",
+        shopeeUrl: "https://shopee.com.br/Grand-Theft-Auto-V-GTA-5-PS5-Midia-Fisica-i.594422693.21826266556?utm_source=an_18144380000&utm_medium=affiliates&utm_campaign=central_gtavi_br&utm_content=gtav_ps5&utm_term=cctaa1899mkb"
       },
       {
         id: "ps5_slim_disco",
@@ -297,9 +320,9 @@
         title: "Console Sony PlayStation 5 Slim 1TB (Edição com Leitor de Disco)",
         desc: "Modelo Slim com 1TB de SSD ultrarrápido e leitor Blu-Ray para rodar mídia física e digital de GTA VI.",
         priceHint: "Oferta em até 10x sem juros",
-        amazonUrl: "https://www.amazon.com.br/s?k=Console+PlayStation+5+Slim+1TB+Disco&tag=txgames-20",
-        meliUrl: "https://www.mercadolivre.com.br/console-sony-playstation-5-edicao-slim-disk-1tb-branco/p/MLB52897777",
-        shopeeUrl: "https://shopee.com.br/search?keyword=console%20playstation%205%20slim%201tb"
+        amazonUrl: "https://www.amazon.com.br/s?k=Console+PlayStation+5+Slim+1TB+Disco&tag=txgames-20&linkCode=ll2",
+        meliUrl: "https://www.mercadolivre.com.br/console-sony-playstation-5-edicao-slim-disk-1tb-branco/p/MLB52897777?matt_tool=65544&matt_word=central_gtavi_br_127800315_ps5_slim_disco",
+        shopeeUrl: "https://shopee.com.br/Console-Playstation-5-Sony-Slim-SSD-1TB-Edi%C3%A7%C3%A3o-Disk-i.1343318906.41309772410?utm_source=an_18144380000&utm_medium=affiliates&utm_campaign=central_gtavi_br&utm_content=ps5_slim_disco&utm_term=cctaa1899mkb"
       },
       {
         id: "ps5_slim_digital",
@@ -308,31 +331,9 @@
         title: "Console Sony PlayStation 5 Slim Edição Digital + Controle DualSense",
         desc: "A forma mais econômica de entrar na nova geração e explorar Vice City e Leonida em 4K.",
         priceHint: "Menor preço da geração",
-        amazonUrl: "https://www.amazon.com.br/s?k=Console+PlayStation+5+Slim+Digital&tag=txgames-20",
-        meliUrl: "https://www.mercadolivre.com.br/console-playstation-5-slim-edicao-digital-825-gb-branco-sony/p/MLB29001054",
-        shopeeUrl: "https://shopee.com.br/search?keyword=ps5%20slim%20digital"
-      },
-      {
-        id: "ssd_nvme_ps5",
-        category: "SETUP",
-        badge: "⚡ EXPANSÃO OBRIGATÓRIA",
-        title: "SSD M.2 NVMe 1TB / 2TB Kingston Fury Renegade (7.300 MB/s c/ Dissipador PS5)",
-        desc: "Leitura de 7.300 MB/s acima do exigido pela Sony. Não fique sem espaço no console para instalar GTA VI!",
-        priceHint: "Compatível com PS5 e PC",
-        amazonUrl: "https://www.amazon.com.br/s?k=SSD+Kingston+Fury+Renegade+1TB+PS5+Dissipador&tag=txgames-20",
-        meliUrl: "https://www.mercadolivre.com.br/ssd-m2-nvme-1tb-2280-kingston-fury-renegade-ps5/up/MLBU3474908531",
-        shopeeUrl: "https://shopee.com.br/search?keyword=ssd%20kingston%20fury%20renegade%201tb%20ps5"
-      },
-      {
-        id: "controle_dualsense",
-        category: "SETUP",
-        badge: "🎮 IMERSÃO EM VICE CITY",
-        title: "Controle Sem Fio Sony DualSense PS5 (Midnight Black / Branco / Cosmic Red)",
-        desc: "Gatilhos adaptáveis e resposta tátil para sentir cada aceleração e tiroteio em Leonida.",
-        priceHint: "Original Sony com garantia",
-        amazonUrl: "https://www.amazon.com.br/s?k=Controle+Sem+Fio+DualSense+PS5&tag=txgames-20",
-        meliUrl: "https://www.mercadolivre.com.br/controle-joystick-sem-fio-sony-playstation-5-dualsense-midnight-black/p/MLB18010993",
-        shopeeUrl: "https://shopee.com.br/search?keyword=controle%20dualsense%20ps5%20original"
+        amazonUrl: "https://www.amazon.com.br/s?k=Console+PlayStation+5+Slim+Edicao+Digital&tag=txgames-20&linkCode=ll2",
+        meliUrl: "https://www.mercadolivre.com.br/console-playstation-5-slim-edicao-digital-825-gb-branco-sony/p/MLB29001054?matt_tool=65544&matt_word=central_gtavi_br_127800315_ps5_slim_digital",
+        shopeeUrl: "https://shopee.com.br/Console-PlayStation-5-Slim-Digital-825GB-i.1343318906.40873387489?utm_source=an_18144380000&utm_medium=affiliates&utm_campaign=central_gtavi_br&utm_content=ps5_slim_digital&utm_term=cctaa1899mkb"
       },
       {
         id: "xbox_series_xs",
@@ -341,50 +342,63 @@
         title: "Console Microsoft Xbox Series X (1TB) e Xbox Series S",
         desc: "Plataforma oficial confirmada pela Rockstar Games para o lançamento de Grand Theft Auto VI em 19/11.",
         priceHint: "Frete rápido disponível",
-        amazonUrl: "https://www.amazon.com.br/s?k=Console+Xbox+Series+X+Series+S&tag=txgames-20",
-        meliUrl: "https://lista.mercadolivre.com.br/console-xbox-series-x",
-        shopeeUrl: "https://shopee.com.br/search?keyword=console%20xbox%20series%20s"
+        amazonUrl: "https://www.amazon.com.br/s?k=Console+Microsoft+Xbox+Series+S+Xbox+Series+X&tag=txgames-20&linkCode=ll2",
+        meliUrl: "https://www.mercadolivre.com.br/console-microsoft-xbox-series-s-1-tb-branco/p/MLB44230040?matt_tool=65544&matt_word=central_gtavi_br_127800315_xbox_series_s",
+        shopeeUrl: "https://shopee.com.br/Console-Xbox-Series-S-512GB-SSD-i.614648434.23292912229?utm_source=an_18144380000&utm_medium=affiliates&utm_campaign=central_gtavi_br&utm_content=xbox_series_s&utm_term=cctaa1899mkb"
+      },
+      {
+        id: "ssd_nvme_ps5",
+        category: "SETUP",
+        badge: "⚡ EXPANSÃO OBRIGATÓRIA",
+        title: "SSD M.2 NVMe 1TB / 2TB Kingston Fury Renegade (7.300 MB/s c/ Dissipador PS5)",
+        desc: "Leitura de 7.300 MB/s acima do exigido pela Sony. Não fique sem espaço no console para instalar GTA VI!",
+        priceHint: "Compatível com PS5 e PC",
+        amazonUrl: "https://www.amazon.com.br/s?k=SSD+Kingston+Fury+Renegade+1TB+PS5+Dissipador&tag=txgames-20&linkCode=ll2",
+        meliUrl: "https://www.mercadolivre.com.br/ssd-m2-nvme-1tb-2280-kingston-fury-renegade-ps5/up/MLBU3474908531?matt_tool=65544&matt_word=central_gtavi_br_127800315_ssd_kingston_ps5",
+        shopeeUrl: "https://shopee.com.br/SSD-Kingston-Fury-Renegade-2TB-PS5-NVMe-7300MB-s-Com-Dissipador-Oficial-i.352682486.22799651953?utm_source=an_18144380000&utm_medium=affiliates&utm_campaign=central_gtavi_br&utm_content=ssd_kingston_ps5&utm_term=cctaa1899mkb"
+      },
+      {
+        id: "controle_dualsense",
+        category: "SETUP",
+        badge: "🎮 IMERSÃO EM VICE CITY",
+        title: "Controle Sem Fio Sony DualSense PS5 (Midnight Black / Branco)",
+        desc: "Gatilhos adaptáveis e resposta tátil para sentir cada aceleração e tiroteio em Leonida.",
+        priceHint: "Original Sony com garantia",
+        amazonUrl: "https://www.amazon.com.br/s?k=Controle+Sem+Fio+Sony+DualSense+PS5&tag=txgames-20&linkCode=ll2",
+        meliUrl: "https://www.mercadolivre.com.br/controle-joystick-sem-fio-sony-playstation-5-dualsense-midnight-black/p/MLB18010993?matt_tool=65544&matt_word=central_gtavi_br_127800315_dualsense_ps5",
+        shopeeUrl: "https://shopee.com.br/Controle-Sem-Fio-DualSense-PlayStation-5-Branco-i.683223635.17646599491?utm_source=an_18144380000&utm_medium=affiliates&utm_campaign=central_gtavi_br&utm_content=dualsense_ps5&utm_term=cctaa1899mkb"
       },
       {
         id: "headset_gamer_3d",
         category: "SETUP",
-        badge: "🎧 ÁUDIO 3D SURROUND",
-        title: "Headset Gamer Sem Fio Sony Pulse 3D / HyperX Cloud III",
-        desc: "Ouça cada detalhe das rádios de Vice City e passos ao redor com áudio 3D Tempest.",
-        priceHint: "Microfone com cancelamento de ruído",
-        amazonUrl: "https://www.amazon.com.br/s?k=Headset+Sem+Fio+Pulse+3D+HyperX+Cloud+PS5&tag=txgames-20",
-        meliUrl: "https://lista.mercadolivre.com.br/headset-pulse-3d-ps5",
-        shopeeUrl: "https://shopee.com.br/search?keyword=headset%20gamer%20ps5%20sem%20fio"
-      },
-      {
-        id: "tv_monitor_120hz",
-        category: "SETUP",
-        badge: "📺 4K 120HZ HDMI 2.1",
-        title: "Smart TV & Monitor Gamer 4K 120Hz com HDMI 2.1 e VRR (LG OLED / Samsung QLED)",
-        desc: "Extraia o máximo de ray-tracing, HDR e fluidez do seu PS5 ou Xbox Series X no lançamento.",
-        priceHint: "Baixo input lag com VRR",
-        amazonUrl: "https://www.amazon.com.br/s?k=Smart+TV+4K+120Hz+Gamer+HDMI+2.1&tag=txgames-20",
-        meliUrl: "https://lista.mercadolivre.com.br/smart-tv-4k-120hz-hdmi-2.1",
-        shopeeUrl: "https://shopee.com.br/search?keyword=monitor%20gamer%20144hz%20hdmi%202.1"
+        badge: "🎧 ÁUDIO 3D + MONITOR 180HZ",
+        title: "Headset Sem Fio Sony Pulse 3D / HyperX Cloud III & Monitor LG UltraGear 27",
+        desc: "Ouça cada detalhe das rádios de Vice City com áudio 3D e jogue com taxa de atualização ultrarrápida.",
+        priceHint: "Setup completo para nova geração",
+        amazonUrl: "https://www.amazon.com.br/s?k=Headset+Sem+Fio+Pulse+3D+HyperX+Cloud+III+PS5&tag=txgames-20&linkCode=ll2",
+        meliUrl: "https://www.mercadolivre.com.br/headset-sem-fio-pulse-3d-ps5-ps4-gamer-playstation-branco/p/MLB34562395?matt_tool=65544&matt_word=central_gtavi_br_127800315_headset_pulse3d",
+        shopeeUrl: "https://shopee.com.br/Headset-Gamer-HyperX-Cloud-III-Wireless-PC-PS5-PS4-i.308187197.22793881403?utm_source=an_18144380000&utm_medium=affiliates&utm_campaign=central_gtavi_br&utm_content=headset_hyperx&utm_term=cctaa1899mkb"
       }
     ];
 
     let products = [];
     try {
-      const saved = localStorage.getItem("central_gtavi_products_v1");
+      const saved = localStorage.getItem("central_gtavi_products_v2");
       products = saved ? JSON.parse(saved) : JSON.parse(JSON.stringify(INITIAL_PRODUCTS));
     } catch (e) {
       products = JSON.parse(JSON.stringify(INITIAL_PRODUCTS));
     }
 
-    let activeCategory = "ALL";
+    const urlParams = new URLSearchParams(window.location.search);
+    let isAdminMode = urlParams.get("admin") === "1" || window.location.hash === "#admin";
+    let activeCategory = urlParams.get("cat") ? urlParams.get("cat").toUpperCase() : "ALL";
     let activeStore = "ALL";
     let searchQuery = "";
     let activeDmTrigger = "GTA6";
 
     function saveProductsState() {
       try {
-        localStorage.setItem("central_gtavi_products_v1", JSON.stringify(products));
+        localStorage.setItem("central_gtavi_products_v2", JSON.stringify(products));
       } catch (e) {}
     }
 
@@ -468,7 +482,7 @@
               <span class="rounded-lg bg-pink-500/15 border border-pink-500/30 px-2.5 py-0.5 text-[11px] font-extrabold text-pink-300">
                 ${item.badge}
               </span>
-              <span class="text-[11px] font-bold text-cyan-300">Gatilho DM: ${item.category}</span>
+              <span class="text-[11px] font-bold text-cyan-300">${isAdminMode ? `Gatilho DM: ${item.category}` : `✅ Oferta Verificada`}</span>
             </div>
             <h3 class="mt-2.5 text-base font-extrabold text-white leading-snug">${item.title}</h3>
             <p class="mt-1.5 text-xs text-slate-300 leading-relaxed">${item.desc}</p>
@@ -570,25 +584,59 @@
       updateCountdown();
       setInterval(updateCountdown, 30000);
 
-      // Tab Switching
+      // Tab Switching & Secret Admin Mode (?admin=1)
       const tabStore = document.getElementById("tabBtnStore");
       const tabAdmin = document.getElementById("tabBtnAdmin");
       const viewStore = document.getElementById("viewStore");
       const viewAdmin = document.getElementById("viewAdmin");
+      const adminNav = document.getElementById("adminNav");
+      const adminTagBadge = document.getElementById("adminTagBadge");
 
-      tabStore.addEventListener("click", () => {
+      function openStoreTab() {
         viewStore.classList.remove("hidden");
         viewAdmin.classList.add("hidden");
         tabStore.className = "rounded-lg px-3 py-1.5 text-xs font-bold transition bg-pink-600 text-white shadow";
         tabAdmin.className = "rounded-lg px-3 py-1.5 text-xs font-bold transition text-slate-300 hover:text-white";
-      });
+      }
 
-      tabAdmin.addEventListener("click", () => {
+      function openAdminTab() {
         viewAdmin.classList.remove("hidden");
         viewStore.classList.add("hidden");
         tabAdmin.className = "rounded-lg px-3 py-1.5 text-xs font-bold transition bg-cyan-500 text-slate-950 shadow";
         tabStore.className = "rounded-lg px-3 py-1.5 text-xs font-bold transition text-slate-300 hover:text-white";
+      }
+
+      function unlockAdminPanel(autoSwitch = true) {
+        isAdminMode = true;
+        adminNav.classList.remove("hidden");
+        adminNav.classList.add("flex");
+        adminTagBadge.classList.remove("hidden");
+        renderStoreGrid();
+        if (autoSwitch) {
+          openAdminTab();
+        }
+      }
+
+      if (isAdminMode) {
+        unlockAdminPanel(true);
+      }
+
+      // Atalho secreto: 5 cliques rápidos no logo @CENTRAL.GTAVI.BR também desbloqueiam o painel
+      let logoClicks = 0;
+      let logoTimer = null;
+      document.getElementById("brandLogoSecret").addEventListener("click", () => {
+        logoClicks += 1;
+        clearTimeout(logoTimer);
+        logoTimer = setTimeout(() => { logoClicks = 0; }, 1500);
+        if (logoClicks >= 5) {
+          logoClicks = 0;
+          unlockAdminPanel(true);
+          showToast("🔓 Modo Admin desbloqueado!");
+        }
       });
+
+      tabStore.addEventListener("click", openStoreTab);
+      tabAdmin.addEventListener("click", openAdminTab);
 
       // Category Filters
       document.querySelectorAll(".cat-btn").forEach((btn) => {
@@ -664,6 +712,38 @@
       document.getElementById("btnCopyPythonDict").addEventListener("click", () => {
         const exported = JSON.stringify(products, null, 2);
         copyTextToClipboard(exported, "Catálogo JSON copiado para a área de transferência!");
+      });
+
+      document.getElementById("btnDownloadUpdatedHtml").addEventListener("click", () => {
+        // Temporariamente restaura o estado público limpo antes de capturar o HTML
+        adminNav.classList.add("hidden");
+        adminNav.classList.remove("flex");
+        adminTagBadge.classList.add("hidden");
+        viewStore.classList.remove("hidden");
+        viewAdmin.classList.add("hidden");
+        const currentHtml = document.documentElement.outerHTML;
+        // Restaura a visualização atual do admin
+        adminNav.classList.remove("hidden");
+        adminNav.classList.add("flex");
+        adminTagBadge.classList.remove("hidden");
+        viewAdmin.classList.remove("hidden");
+        viewStore.classList.add("hidden");
+
+        const productsJson = JSON.stringify(products, null, 6);
+        const updatedHtml = "<!DOCTYPE html>\n" + currentHtml.replace(
+          /const INITIAL_PRODUCTS = \[[\s\S]*?\];/,
+          `const INITIAL_PRODUCTS = ${productsJson};`
+        );
+        const blob = new Blob([updatedHtml], { type: "text/html;charset=utf-8" });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "index.html";
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        showToast("Arquivo index.html baixado com seus novos links!");
       });
     });
   </script>
