@@ -455,7 +455,7 @@
       }
     ];
 
-    const STORAGE_KEY = "central_gtavi_products_v4";
+    const STORAGE_KEY = "central_gtavi_products_v5";
     let products = [];
     try {
       const saved = localStorage.getItem(STORAGE_KEY);
@@ -615,16 +615,6 @@
 
 🌴 Todos os itens estão na vitrine da bio do @central.gtavi.br: https://tthiagoabreu.github.io/central.gtavi.br/`;
     }
-      if (trigger === "CONSOLE") {
-        const pPs5Dig = products[3];
-        const pPs5Disk = products[2];
-        const pXbox = products[4];
-        return `🎮 Quer chegar em Leonida no dia 19/11 rodando liso? Confira os consoles em estoque nos menores preços de hoje:\n\n🟠 PS5 Slim Digital na Shopee Mall (R$ 3.771,08 no Pix): ${pPs5Dig.shopeeUrl}\n🟡 PS5 Slim c/ Leitor 1TB no Mercado Livre (R$ 4.800): ${pPs5Disk.meliUrl}\n🟠 Xbox Series S na Shopee (R$ 2.691,28 no Pix): ${pXbox.shopeeUrl}\n🟠 Consoles na Amazon (em até 10x): ${pPs5Disk.amazonUrl}\n\n🌴 Veja todos os modelos na bio do @central.gtavi.br: https://tthiagoabreu.github.io/central.gtavi.br/`;
-      }
-      const pSsd = products[5];
-      const pCtrl = products[6];
-      const pHeadset = products[7];
-      return `⚡ Prepare seu Setup para GTA VI com itens em estoque e em promoção:\n\n🟠 Controle DualSense PS5 na Shopee (R$ 356,32 no Pix): ${pCtrl.shopeeUrl}\n🟡 Controle DualSense PS5 no Mercado Livre (R$ 395,51 no Pix): ${pCtrl.meliUrl}\n🟡 SSD Kingston 1TB PCIe 4.0 no Mercado Livre (R$ 1.017): ${pSsd.meliUrl}\n🟠 Headset Sem Fio JBL Quantum 360 na Shopee (R$ 380 no Pix): ${pHeadset.shopeeUrl}\n\n🌴 Todos os itens estão na vitrine da bio do @central.gtavi.br: https://tthiagoabreu.github.io/central.gtavi.br/`;
 
     function renderDmTemplatePreview() {
       const pre = document.getElementById("dmTemplatePreviewText");
